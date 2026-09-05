@@ -1,6 +1,6 @@
 {
   "name": "@red-cup-engineering/alpha-portfolio-order-intent-service",
-  "version": "0.1.5",
+  "version": "0.1.6",
   "type": "module",
   "files": [
     "src/"
@@ -15,6 +15,7 @@
   },
   "description": "alpha-portfolio-order-intent-service sovereign enterprise",
   "dependencies": {
+    "@red-cup-engineering/canonical-json-service": "0.2.1",
     "@red-cup-engineering/semantic-content-identify-service": "0.2.7"
   },
   "devDependencies": {

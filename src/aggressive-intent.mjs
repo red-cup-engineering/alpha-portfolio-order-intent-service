@@ -1,7 +1,8 @@
 import { EMPTY_WITNESS_ROOT, identifyJsonSemanticContent } from "@red-cup-engineering/semantic-content-identify-service";
+import { canonicalJson as canonical } from "@red-cup-engineering/canonical-json-service";
 
 const semanticId = (value) => identifyJsonSemanticContent({ objectKind: "brokerage.alpha-portfolio-order-intent.record", value, witnessRoot: EMPTY_WITNESS_ROOT }).id;
-const canonical = (v) => v === null || typeof v !== "object" ? JSON.stringify(v) : Array.isArray(v) ? `[${v.map(canonical).join(",")}]` : `{${Object.keys(v).sort().map((k) => `${JSON.stringify(k)}:${canonical(v[k])}`).join(",")}}`;
+
 const id = (v) => semanticId(v);
 const positive = (v, label) => { const n = Number(v); if (!Number.isFinite(n) || n <= 0) throw new TypeError(`${label}-invalid`); return n; };
 export function validateAggressivePortfolioIntentRequest({ contract, evidencePackets, symbol, side = "buy", notional, maximumLoss, thesis, falsifier, liquidityPremise, executionPremise, scenarios, strategyCandidate, promotionCertificate } = {}) {
