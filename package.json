@@ -15,7 +15,6 @@
   },
   "description": "alpha-portfolio-order-intent-service sovereign enterprise",
   "dependencies": {
-    "@red-cup-engineering/canonical-json-service": "0.2.1",
     "@red-cup-engineering/semantic-content-identify-service": "0.2.7"
   },
   "devDependencies": {

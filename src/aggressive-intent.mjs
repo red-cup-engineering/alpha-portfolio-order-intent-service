@@ -1,5 +1,4 @@
 import { EMPTY_WITNESS_ROOT, identifyJsonSemanticContent } from "@red-cup-engineering/semantic-content-identify-service";
-import { canonicalJson as canonical } from "@red-cup-engineering/canonical-json-service";
 
 const semanticId = (value) => identifyJsonSemanticContent({ objectKind: "brokerage.alpha-portfolio-order-intent.record", value, witnessRoot: EMPTY_WITNESS_ROOT }).id;
 
