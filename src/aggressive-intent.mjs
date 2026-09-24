@@ -1,6 +1,6 @@
-import { EMPTY_WITNESS_ROOT, identifyJsonSemanticContent } from "@red-cup-engineering/computer-code-engineering-services-section/semiotic-expression-notation/semantic-content-identity";
+import { semanticIdOf } from "@red-cup-engineering/computer-code-engineering-services-section/semiotic-expression-notation/semantic-content-identity";
 
-const semanticId = (value) => identifyJsonSemanticContent({ objectKind: "brokerage.alpha-portfolio-order-intent.record", value, witnessRoot: EMPTY_WITNESS_ROOT }).id;
+const semanticId = semanticIdOf("brokerage.alpha-portfolio-order-intent.record");
 
 const id = (v) => semanticId(v);
 const positive = (v, label) => { const n = Number(v); if (!Number.isFinite(n) || n <= 0) throw new TypeError(`${label}-invalid`); return n; };
