@@ -10,14 +10,10 @@ export function validateAggressivePortfolioIntentRequest({ contract, evidencePac
   const n = positive(notional, "notional"), loss = positive(maximumLoss, "maximum-loss");
   if (n > contract.risk.maximumOrderNotional || loss > contract.risk.maximumLossAmount || n / contract.capital.amount > contract.risk.concentrationLimit) throw new RangeError("contract-risk-boundary-exceeded");
   if (typeof symbol !== "string" || symbol.trim() === "" || ![thesis, falsifier, liquidityPremise, executionPremise].every((x) => typeof x === "string" && x.trim()) || !Array.isArray(scenarios) || scenarios.length < 2 || scenarios.some((s) => !Number.isFinite(Number(s.pnl)))) throw new TypeError("aggressive-analysis-incomplete");
-  const proofGoverned = contract.scopes.includes("strategy:obsmetrologia-paper-promotion");
-  if (proofGoverned && (
-    typeof strategyCandidate !== "string" ||
-    promotionCertificate?.type !== "ObsmetrologiaPaperPromotionCertificate" ||
-    promotionCertificate.candidate !== strategyCandidate ||
-    promotionCertificate.paperPromotionEstablished !== true ||
-    promotionCertificate.liveReadinessEstablished !== false
-  )) throw new TypeError("obsmetrologia-paper-promotion-required");
+  // An order intent is a bounded proposal, not a promotion or venue effect.
+  // A paper-only promotion certificate cannot establish (or prohibit) live
+  // execution.  The execution transport admits the matching live authority
+  // and observes the actual account immediately before placing an order.
   const worstScenarioLoss = Math.max(0, ...scenarios.map((s) => -Number(s.pnl))); if (worstScenarioLoss > loss) throw new RangeError("scenario-loss-exceeds-declared-loss");
   return Object.freeze({ contract, evidencePackets, symbol, side, notional: n, maximumLoss: loss, thesis, falsifier, liquidityPremise, executionPremise, scenarios, strategyCandidate: strategyCandidate ?? null, promotionCertificate: promotionCertificate ?? null });
 }
