@@ -16,7 +16,8 @@
   "description": "alpha-portfolio-order-intent-service sovereign enterprise",
   "dependencies": {
     "@red-cup-engineering/brokerage-control-api-federation": "0.1.2",
-    "@red-cup-engineering/computer-code-engineering-services-section": "0.1.0"
+    "@red-cup-engineering/computer-code-engineering-services-section": "0.1.0",
+    "@red-cup-engineering/computer-content-engineering-services-section": "0.1.0"
   },
   "devDependencies": {
     "@red-cup-engineering/principal-brokerage-interface": "0.1.4"
