@@ -1,25 +1,26 @@
 {
-  "name": "@red-cup-engineering/alpha-portfolio-order-intent-service",
-  "version": "0.1.6",
-  "type": "module",
-  "files": [
-    "src/"
-  ],
+  "dependencies": {
+    "@red-cup-engineering/brokerage-control-api-federation": "workspace:*",
+    "@red-cup-engineering/computer-code-engineering-services-section": "workspace:*",
+    "@red-cup-engineering/computer-content-engineering-services-section": "workspace:*",
+    "@red-cup-engineering/mandate-portfolio-allocation-service": "workspace:*"
+  },
+  "description": "alpha-portfolio-order-intent-service sovereign enterprise",
+  "devDependencies": {
+    "@red-cup-engineering/principal-brokerage-interface": "workspace:*"
+  },
   "exports": {
     ".": "./src/aggressive-intent.mjs",
     "./src/aggressive-intent.mjs": "./src/aggressive-intent.mjs"
   },
+  "files": [
+    "src/"
+  ],
+  "name": "@red-cup-engineering/alpha-portfolio-order-intent-service",
   "scripts": {
     "check": "node --check src/aggressive-intent.mjs",
     "test": "node --test test/*.test.mjs"
   },
-  "description": "alpha-portfolio-order-intent-service sovereign enterprise",
-  "dependencies": {
-    "@red-cup-engineering/brokerage-control-api-federation": "workspace:*",
-    "@red-cup-engineering/computer-code-engineering-services-section": "workspace:*",
-    "@red-cup-engineering/computer-content-engineering-services-section": "workspace:*"
-  },
-  "devDependencies": {
-    "@red-cup-engineering/principal-brokerage-interface": "workspace:*"
-  }
+  "type": "module",
+  "version": "0.1.6"
 }
