@@ -9,7 +9,7 @@ export function validateAggressivePortfolioIntentRequest({ contract, evidencePac
   if (contract?.type !== "PrincipalBrokerageServiceContract" || !contract.scopes?.includes("orders:intent")) throw new TypeError("order-intent-contract-required");
   if (!Array.isArray(evidencePackets) || evidencePackets.length === 0 || evidencePackets.some((p) => p?.type !== "IssuerEvidencePacket")) throw new TypeError("issuer-evidence-required");
   const n = positive(notional, "notional"), loss = positive(maximumLoss, "maximum-loss");
-  if (marketDecision && (side !== 'buy' || Math.ceil(n * 100 - 1e-9) > allocationFor(marketDecision, { venue: 'alpaca', instrument: String(symbol).toUpperCase(), side: 'long', at: asOf }))) throw new RangeError('order-exceeds-shared-market-allocation');
+  if (marketDecision && (side !== 'buy' || Math.ceil(n * 100 - 1e-9) > allocationFor(marketDecision, { venue: 'alpaca', principal: contract.principal, instrument: String(symbol).toUpperCase(), side: 'long', at: asOf }))) throw new RangeError('order-exceeds-shared-market-allocation');
   if (n > contract.risk.maximumOrderNotional || loss > contract.risk.maximumLossAmount || n / contract.capital.amount > contract.risk.concentrationLimit) throw new RangeError("contract-risk-boundary-exceeded");
   if (typeof symbol !== "string" || symbol.trim() === "" || ![thesis, falsifier, liquidityPremise, executionPremise].every((x) => typeof x === "string" && x.trim()) || !Array.isArray(scenarios) || scenarios.length < 2 || scenarios.some((s) => !Number.isFinite(Number(s.pnl)))) throw new TypeError("aggressive-analysis-incomplete");
   // An order intent is a bounded proposal, not a promotion or venue effect.
