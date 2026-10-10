@@ -1,12 +1,11 @@
 {
   "dependencies": {
-    "@red-cup-engineering/brokerage-control-api-federation": "workspace:*",
-    "@red-cup-engineering/computer-code-engineering-services-section": "workspace:*",
     "@red-cup-engineering/computer-content-engineering-services-section": "workspace:*",
     "@red-cup-engineering/mandate-portfolio-allocation-service": "workspace:*"
   },
   "description": "alpha-portfolio-order-intent-service sovereign enterprise",
   "devDependencies": {
+    "@red-cup-engineering/brokerage-control-api-federation": "workspace:*",
     "@red-cup-engineering/principal-brokerage-interface": "workspace:*"
   },
   "exports": {
