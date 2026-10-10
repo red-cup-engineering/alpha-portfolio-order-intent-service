@@ -5,7 +5,7 @@
   },
   "description": "alpha-portfolio-order-intent-service sovereign enterprise",
   "devDependencies": {
-    "@red-cup-engineering/brokerage-control-api-federation": "workspace:*",
+    "@red-cup-engineering/alpaca-services-section": "workspace:*",
     "@red-cup-engineering/principal-brokerage-interface": "workspace:*"
   },
   "exports": {

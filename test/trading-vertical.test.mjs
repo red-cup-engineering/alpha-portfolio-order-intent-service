@@ -1,7 +1,7 @@
 import assert from "node:assert/strict";
 import test from "node:test";
 
-import { formIssuerEvidencePacket } from "@red-cup-engineering/brokerage-control-api-federation/evidence-packet";
+import { formIssuerEvidencePacket } from "@red-cup-engineering/alpaca-services-section/evidence-packet";
 import { formPrincipalBrokerageContract } from "@red-cup-engineering/principal-brokerage-interface";
 import { formAggressivePortfolioIntent } from "../src/aggressive-intent.mjs";
 
