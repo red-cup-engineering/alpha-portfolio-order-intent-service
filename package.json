@@ -1,7 +1,7 @@
 {
   "dependencies": {
-    "@red-cup-engineering/computer-content-engineering-services-section": "workspace:*",
-    "@red-cup-engineering/mandate-portfolio-allocation-service": "workspace:*"
+    "@red-cup-engineering/mandate-portfolio-allocation-service": "workspace:*",
+    "@red-cup-engineering/computer-content-address-engineering-services-section": "workspace:*"
   },
   "description": "alpha-portfolio-order-intent-service sovereign enterprise",
   "devDependencies": {
