@@ -5,6 +5,11 @@
     "@red-cup-engineering/mandate-portfolio-allocation-service": "0.2.1"
   },
   "description": "alpha-portfolio-order-intent-service sovereign enterprise",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/red-cup-engineering/prediction-market-engineering-services-section.git",
+    "directory": "services/alpha-portfolio-order-intent-service"
+  },
   "devDependencies": {
     "@red-cup-engineering/alpaca-services-section": "0.1.3",
     "@red-cup-engineering/principal-brokerage-interface": "0.1.6"
