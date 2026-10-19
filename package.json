@@ -7,8 +7,7 @@
   "description": "alpha-portfolio-order-intent-service sovereign enterprise",
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/red-cup-engineering/prediction-market-engineering-services-section.git",
-    "directory": "services/alpha-portfolio-order-intent-service"
+    "url": "git+https://github.com/red-cup-engineering/alpha-portfolio-order-intent-service.git"
   },
   "devDependencies": {
     "@red-cup-engineering/alpaca-services-section": "0.1.3",
