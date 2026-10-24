@@ -10,7 +10,7 @@
     "url": "git+https://github.com/red-cup-engineering/alpha-portfolio-order-intent-service.git"
   },
   "devDependencies": {
-    "@red-cup-engineering/alpaca-engineering-services-section": "0.1.3",
+    "@red-cup-engineering/alpaca-services-section": "0.1.3",
     "@red-cup-engineering/principal-brokerage-interface": "0.1.6"
   },
   "exports": {
